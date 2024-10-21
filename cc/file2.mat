@@ -1,0 +1,15 @@
+a=imread('flower3.jpg');
+b=rgb2gray(a);
+subplot(2,2,1);
+imshow(b);
+title('original grayscale image');
+subplot(2,2,3);
+imhist(b);
+title('histrogram of original grayscale image');
+j=histeq(b);
+subplot(2,2,2);
+imshow(j);
+title('image after histogram equalization');
+subplot(2,2,4);
+imhist(j);
+title('histogram of image after histogram equalization');
